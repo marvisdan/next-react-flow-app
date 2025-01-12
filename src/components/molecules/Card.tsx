@@ -37,7 +37,7 @@ export default function Card({
 				{tags && tags.length > 0 ? (
 					<CardContent className="pb-3">
 						<p className="text-gray-500 mb-4">{description}</p>
-						<div className="flex gap-2">
+						<div className="flex gap-2 mb-1">
 							{tags.map((tag, index) => (
 								<Badge
 									key={index}
@@ -53,7 +53,7 @@ export default function Card({
 				<CardFooter>
 					<Button
 						variant="outline"
-						className="w-full border-gray-200"
+						className="w-full border-gray-200 "
 						onClick={onClick}>
 						{buttonText}
 					</Button>
