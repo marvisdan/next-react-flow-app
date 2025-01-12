@@ -65,7 +65,7 @@ const CardNode = ({ data }: Node<CardNodeData>) => {
 	const { title, description, tags, buttonText, onButtonClick } = data;
 	return (
 		<>
-			<Handle type="target" position={Position.Top} />
+			<Handle type="source" position={Position.Right} />
 
 			<Card
 				title={title}
@@ -74,7 +74,7 @@ const CardNode = ({ data }: Node<CardNodeData>) => {
 				buttonText={buttonText}
 				onClick={onButtonClick}
 			/>
-			<Handle type="source" position={Position.Bottom} />
+			<Handle type="target" position={Position.Left} />
 		</>
 	);
 };
