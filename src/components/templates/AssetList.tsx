@@ -22,7 +22,7 @@ export default function AssetList() {
 	return (
 		<div className=" gap-2 w-1/2 h-full flex flex-col items-center justify-center ">
 			<FlexDiv>
-				<h4>{"Button List"}</h4>
+				<h4 className="dark:text-black">{"Button List"}</h4>
 				<Button variant="primary" size="md" type="submit">
 					{"Default"}
 				</Button>
@@ -38,7 +38,7 @@ export default function AssetList() {
 			</FlexDiv>
 
 			<FlexDiv>
-				<h4>{"Filled"} </h4>
+				<h4 className="dark:text-black">{"Filled"} </h4>
 
 				<Button variant="primary" size="xs">
 					{"Button Text"}
@@ -58,7 +58,7 @@ export default function AssetList() {
 			</FlexDiv>
 
 			<FlexDiv>
-				<h4>{"Outlined"}</h4>
+				<h4 className="dark:text-black">{"Outlined"}</h4>
 				<Button variant="outline" size="xs">
 					{"Button Text"}
 				</Button>
@@ -77,7 +77,7 @@ export default function AssetList() {
 			</FlexDiv>
 
 			<FlexDiv>
-				<h4>{"Link"}</h4>
+				<h4 className="dark:text-black">{"Link"}</h4>
 				<Button variant="link" size="xs">
 					{"Button Text"}
 				</Button>
@@ -96,7 +96,7 @@ export default function AssetList() {
 			</FlexDiv>
 
 			<FlexDiv>
-				<h3>{"Icon"} </h3>
+				<h4 className="dark:text-black">{"Icon"} </h4>
 				<Button isIconOnly size="sm">
 					<Search />
 				</Button>
@@ -110,7 +110,7 @@ export default function AssetList() {
 					<Plus />
 				</Button>
 				<Button variant="link" size="md" startIcon={<Home />}>
-					Home
+					{"Home"}
 				</Button>
 			</FlexDiv>
 
