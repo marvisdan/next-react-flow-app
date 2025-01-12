@@ -1,13 +1,27 @@
 "use client";
 
 import { Home, Menu, Plus, Search } from "lucide-react";
+import { JSX } from "react";
+
 import { Button } from "@/components/ui/button";
-import Card from "../molecules/Card";
+import Card from "@/components/molecules/Card";
+
+type FlexDivProps = {
+	children: JSX.Element | JSX.Element[];
+} & React.HTMLAttributes<HTMLDivElement>;
+
+const FlexDiv = ({ children, ...props }: FlexDivProps) => {
+	return (
+		<div className="flex gap-2 items-center" {...props}>
+			{children}
+		</div>
+	);
+};
 
 export default function AssetList() {
 	return (
-		<div className=" gap-2 w-full h-full flex flex-col items-center justify-center ">
-			<div className="flex gap-2 items-center">
+		<div className=" gap-2 w-1/2 h-full flex flex-col items-center justify-center ">
+			<FlexDiv>
 				<h4>{"Button List"}</h4>
 				<Button variant="primary" size="md" type="submit">
 					{"Default"}
@@ -21,9 +35,9 @@ export default function AssetList() {
 				<Button variant="link" size="md" type="submit">
 					{"Link"}
 				</Button>
-			</div>
+			</FlexDiv>
 
-			<div className="flex gap-2 items-center">
+			<FlexDiv>
 				<h4>{"Filled"} </h4>
 
 				<Button variant="primary" size="xs">
@@ -41,9 +55,9 @@ export default function AssetList() {
 				<Button variant="primary" size="xl">
 					{"Button Text"}
 				</Button>
-			</div>
+			</FlexDiv>
 
-			<div className="flex gap-2 items-center">
+			<FlexDiv>
 				<h4>{"Outlined"}</h4>
 				<Button variant="outline" size="xs">
 					{"Button Text"}
@@ -60,9 +74,9 @@ export default function AssetList() {
 				<Button variant="outline" size="xl">
 					{"Button Text"}
 				</Button>
-			</div>
+			</FlexDiv>
 
-			<div className="flex gap-2 items-center">
+			<FlexDiv>
 				<h4>{"Link"}</h4>
 				<Button variant="link" size="xs">
 					{"Button Text"}
@@ -79,9 +93,9 @@ export default function AssetList() {
 				<Button variant="link" size="xl">
 					{"Button Text"}
 				</Button>
-			</div>
+			</FlexDiv>
 
-			<div className="flex gap-2 items-center">
+			<FlexDiv>
 				<h3>{"Icon"} </h3>
 				<Button isIconOnly size="sm">
 					<Search />
@@ -98,9 +112,9 @@ export default function AssetList() {
 				<Button variant="link" size="md" startIcon={<Home />}>
 					Home
 				</Button>
-			</div>
+			</FlexDiv>
 
-			<div className="flex gap-2 items-start">
+			<FlexDiv>
 				<h4>{"Card"}</h4>
 				<Card
 					title="Card title"
@@ -108,7 +122,7 @@ export default function AssetList() {
 					tags={["flow", "chart"]}
 					buttonText="Button text"
 				/>
-			</div>
+			</FlexDiv>
 		</div>
 	);
 }
