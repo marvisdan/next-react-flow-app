@@ -61,7 +61,7 @@ export default function CreateAccountForm() {
 						placeholder="Confirm Password"
 					/>
 					<Button variant="primary" size="md" type="submit">
-						{"Primary"}
+						{"Submit"}
 					</Button>
 				</form>
 			</FormProvider>
