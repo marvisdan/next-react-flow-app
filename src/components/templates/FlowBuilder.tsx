@@ -63,9 +63,14 @@ const CardNode = ({ data }: Node<CardNodeData>) => {
 	console.log({ data });
 
 	const { title, description, tags, buttonText, onButtonClick } = data;
+	const style = {
+		background: "rgba(217, 217, 217, 1)",
+		width: "11px",
+		height: "11px"
+	};
 	return (
 		<>
-			<Handle type="source" position={Position.Right} />
+			<Handle type="source" position={Position.Right} style={style} />
 
 			<Card
 				title={title}
@@ -74,7 +79,7 @@ const CardNode = ({ data }: Node<CardNodeData>) => {
 				buttonText={buttonText}
 				onClick={onButtonClick}
 			/>
-			<Handle type="target" position={Position.Left} />
+			<Handle type="target" position={Position.Left} style={style} />
 		</>
 	);
 };
