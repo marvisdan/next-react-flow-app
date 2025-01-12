@@ -31,9 +31,11 @@ const buttonVariants = cva(
 				md: "h-10 px-5", // base size
 				lg: "h-12 px-6",
 				xl: "h-14 px-6",
-				icon: "h-10 w-10",
+				"icon-xs": "h-8 w-8",
 				"icon-sm": "h-9 w-9",
-				"icon-lg": "h-11 w-11"
+				icon: "h-10 w-10",
+				"icon-lg": "h-11 w-11",
+				"icon-xl": "h-12 w-12"
 			}
 		},
 		defaultVariants: {
@@ -70,7 +72,15 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 		const Comp = asChild ? Slot : "button";
 
 		const iconSize =
-			size === "sm" ? "icon-sm" : size === "lg" ? "icon-lg" : "icon";
+			size === "xs"
+				? "icon-xs"
+				: size === "sm"
+				? "icon-sm"
+				: size === "lg"
+				? "icon-lg"
+				: size === "xl"
+				? "icon-xl"
+				: "icon";
 		const finalSize = isIconOnly ? iconSize : size;
 
 		return (

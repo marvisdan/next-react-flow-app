@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, Menu, Plus, Search } from "lucide-react";
+import { Home, Menu, Minus, Plus, Search } from "lucide-react";
 import { JSX } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -97,6 +97,9 @@ export default function AssetList() {
 
 			<FlexDiv>
 				<h4 className="dark:text-black">{"Icon"} </h4>
+				<Button isIconOnly size="xs">
+					<Minus />
+				</Button>
 				<Button isIconOnly size="sm">
 					<Search />
 				</Button>
