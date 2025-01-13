@@ -6,7 +6,7 @@ interface CardNodeData {
 	onButtonClick: () => void;
 	[key: string]: unknown;
 }
-// Define the node types mapping
+
 type CardNodeTypes = {
-	cardNode: React.FC<Node<CardNodeData>>;
+	cardNode: FC<Node<CardNodeData>>;
 };

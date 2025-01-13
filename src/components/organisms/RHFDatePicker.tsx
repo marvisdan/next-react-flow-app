@@ -41,6 +41,10 @@ export default function RHFDatePicker({
 					const { value, onChange } = field;
 					const date = value ? new Date(value) : undefined;
 
+					const onSelect = (newDate?: Date) => {
+						onChange(newDate ? newDate.toISOString() : "");
+					};
+
 					return (
 						<Popover>
 							<PopoverTrigger asChild>
@@ -59,9 +63,7 @@ export default function RHFDatePicker({
 								<Calendar
 									mode="single"
 									selected={date}
-									onSelect={(newDate) => {
-										onChange(newDate ? newDate.toISOString() : "");
-									}}
+									onSelect={onSelect}
 									initialFocus
 								/>
 							</PopoverContent>
@@ -69,7 +71,7 @@ export default function RHFDatePicker({
 					);
 				}}
 			/>
-			{errors[name] && (
+			{errors.name && (
 				<FormMessage className="text-sm text-red-500">
 					{errors[name]?.message as string}
 				</FormMessage>

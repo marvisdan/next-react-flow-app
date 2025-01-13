@@ -7,7 +7,7 @@ import { Button } from "@/components/atoms/Button";
 import RHFInput from "@/components/organisms/RHFInput";
 
 import { toast } from "@/hooks/use-toast";
-import { submitForm } from "@/app/auth/actions/submitForm";
+import { submitForm } from "@/app/auth/_actions/submitForm";
 import { testFormSchema, TestFormData } from "@/schemas/formSchema";
 
 const defaultValues: TestFormData = {
