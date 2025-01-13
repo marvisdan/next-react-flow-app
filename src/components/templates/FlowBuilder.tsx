@@ -60,8 +60,6 @@ const initialNodes: Node[] = [
 ];
 
 const CardNode = ({ data }: Node<CardNodeData>) => {
-	console.log({ data });
-
 	const { title, description, tags, buttonText, onButtonClick } = data;
 	const style = {
 		background: "rgba(217, 217, 217, 1)",
