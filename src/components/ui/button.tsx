@@ -85,9 +85,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
 		return (
 			<Comp
+				{...props}
 				className={cn(buttonVariants({ variant, size: finalSize, className }))}
-				ref={ref}
-				{...props}>
+				ref={ref}>
 				{isIconOnly ? (
 					startIcon || children
 				) : (

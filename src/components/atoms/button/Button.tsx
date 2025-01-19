@@ -14,14 +14,13 @@ interface Props extends ButtonProps {
 	endIcon?: React.ReactNode;
 }
 
-export function Button({
+export default function Button({
 	children,
 	onClick,
 	variant = "primary",
 	size = "md",
 	startIcon,
 	endIcon,
-
 	...props
 }: Props) {
 	return (

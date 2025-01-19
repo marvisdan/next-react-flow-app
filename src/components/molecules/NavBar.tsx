@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { PATH } from "@/lib/constants";
-import { Button } from "@/components/atoms/Button";
+import Button from "@/components/atoms/button/Button";
 import { SwitchTheme } from "../theme";
 
 export const Navbar = () => {

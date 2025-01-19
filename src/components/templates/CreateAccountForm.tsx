@@ -3,7 +3,7 @@
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { Button } from "@/components/atoms/Button";
+import Button from "@/components/atoms/button/Button";
 import RHFInput from "@/components/organisms/RHFInput";
 
 import { toast } from "@/hooks/use-toast";

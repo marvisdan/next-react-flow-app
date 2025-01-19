@@ -9,7 +9,7 @@ import {
 	FormMessage
 } from "@/components/ui/form";
 import { InputProps } from "@/components/ui/input";
-import { InputField } from "@/components/atoms/InputField";
+import { InputField } from "@/components/atoms/input/InputField";
 
 import { cn } from "@/lib/utils";
 
