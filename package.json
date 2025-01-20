@@ -9,7 +9,10 @@
 		"lint": "next lint",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
-		"bundlewatch": "bundlewatch"
+		"bundlewatch": "bundlewatch",
+		"prepare": "husky",
+		"test": "pnpm run test:bundle-size",
+		"test:bundle-size": "bundlewatch"
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^3.10.0",
